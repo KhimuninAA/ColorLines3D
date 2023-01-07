@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FD803F4E2966275C001BC9B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD803F4D2966275C001BC9B6 /* AppDelegate.swift */; };
+		FD803F502966275E001BC9B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD803F4F2966275E001BC9B6 /* Assets.xcassets */; };
+		FD803F532966275E001BC9B6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD803F512966275E001BC9B6 /* MainMenu.xib */; };
+		FD803F5C296627BF001BC9B6 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD803F5B296627BF001BC9B6 /* RootView.swift */; };
+		FD803F5F296627EE001BC9B6 /* ScenesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD803F5E296627EE001BC9B6 /* ScenesView.swift */; };
+		FD803F632966285D001BC9B6 /* SKScene.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = FD803F622966285D001BC9B6 /* SKScene.scnassets */; };
+		FD803F6B29662BA0001BC9B6 /* TexturesCom_Metal_SteelRough2_1K_ao.tif in Resources */ = {isa = PBXBuildFile; fileRef = FD803F6629662BA0001BC9B6 /* TexturesCom_Metal_SteelRough2_1K_ao.tif */; };
+		FD803F6C29662BA0001BC9B6 /* TexturesCom_Metal_SteelRough2_1K_normal.tif in Resources */ = {isa = PBXBuildFile; fileRef = FD803F6729662BA0001BC9B6 /* TexturesCom_Metal_SteelRough2_1K_normal.tif */; };
+		FD803F6D29662BA0001BC9B6 /* TexturesCom_Metal_SteelRough2_1K_roughness.tif in Resources */ = {isa = PBXBuildFile; fileRef = FD803F6829662BA0001BC9B6 /* TexturesCom_Metal_SteelRough2_1K_roughness.tif */; };
+		FD803F6E29662BA0001BC9B6 /* TexturesCom_Metal_SteelRough2_1K_albedo.tif in Resources */ = {isa = PBXBuildFile; fileRef = FD803F6929662BA0001BC9B6 /* TexturesCom_Metal_SteelRough2_1K_albedo.tif */; };
+		FD803F6F29662BA0001BC9B6 /* TexturesCom_Metal_SteelRough2_1K_metallic.tif in Resources */ = {isa = PBXBuildFile; fileRef = FD803F6A29662BA0001BC9B6 /* TexturesCom_Metal_SteelRough2_1K_metallic.tif */; };
+		FD803F7329662D89001BC9B6 /* pole1.tiff in Resources */ = {isa = PBXBuildFile; fileRef = FD803F7229662D89001BC9B6 /* pole1.tiff */; };
+		FD803F762967521A001BC9B6 /* FrenchMosaic_512_albedo.tiff in Resources */ = {isa = PBXBuildFile; fileRef = FD803F752967521A001BC9B6 /* FrenchMosaic_512_albedo.tiff */; };
+		FD803F782967521F001BC9B6 /* FrenchMosaic_512_normal.tiff in Resources */ = {isa = PBXBuildFile; fileRef = FD803F772967521F001BC9B6 /* FrenchMosaic_512_normal.tiff */; };
+		FD803F7A2968200D001BC9B6 /* OverlayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD803F792968200D001BC9B6 /* OverlayScene.swift */; };
+		FD803F7C296847A3001BC9B6 /* AlgoritmA.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD803F7B296847A3001BC9B6 /* AlgoritmA.swift */; };
+		FD803F7E2968491E001BC9B6 /* BallNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD803F7D2968491E001BC9B6 /* BallNode.swift */; };
+		FD803F802968496D001BC9B6 /* BallColorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD803F7F2968496D001BC9B6 /* BallColorType.swift */; };
+		FD803F82296849D0001BC9B6 /* FloorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD803F81296849D0001BC9B6 /* FloorNode.swift */; };
+		FD803F8529689B22001BC9B6 /* Ort.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD803F8429689B22001BC9B6 /* Ort.swift */; };
+		FD803F8729689BB6001BC9B6 /* Vec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD803F8629689BB6001BC9B6 /* Vec.swift */; };
+		FD803F8929689DCA001BC9B6 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD803F8829689DCA001BC9B6 /* Point.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FD803F4A2966275C001BC9B6 /* MacOS-ColorLines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MacOS-ColorLines.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD803F4D2966275C001BC9B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FD803F4F2966275E001BC9B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FD803F522966275E001BC9B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		FD803F542966275E001BC9B6 /* MacOS_ColorLines.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacOS_ColorLines.entitlements; sourceTree = "<group>"; };
+		FD803F5B296627BF001BC9B6 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		FD803F5E296627EE001BC9B6 /* ScenesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenesView.swift; sourceTree = "<group>"; };
+		FD803F622966285D001BC9B6 /* SKScene.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = SKScene.scnassets; sourceTree = "<group>"; };
+		FD803F6629662BA0001BC9B6 /* TexturesCom_Metal_SteelRough2_1K_ao.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = TexturesCom_Metal_SteelRough2_1K_ao.tif; sourceTree = "<group>"; };
+		FD803F6729662BA0001BC9B6 /* TexturesCom_Metal_SteelRough2_1K_normal.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = TexturesCom_Metal_SteelRough2_1K_normal.tif; sourceTree = "<group>"; };
+		FD803F6829662BA0001BC9B6 /* TexturesCom_Metal_SteelRough2_1K_roughness.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = TexturesCom_Metal_SteelRough2_1K_roughness.tif; sourceTree = "<group>"; };
+		FD803F6929662BA0001BC9B6 /* TexturesCom_Metal_SteelRough2_1K_albedo.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = TexturesCom_Metal_SteelRough2_1K_albedo.tif; sourceTree = "<group>"; };
+		FD803F6A29662BA0001BC9B6 /* TexturesCom_Metal_SteelRough2_1K_metallic.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = TexturesCom_Metal_SteelRough2_1K_metallic.tif; sourceTree = "<group>"; };
+		FD803F7229662D89001BC9B6 /* pole1.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = pole1.tiff; sourceTree = "<group>"; };
+		FD803F752967521A001BC9B6 /* FrenchMosaic_512_albedo.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = FrenchMosaic_512_albedo.tiff; sourceTree = "<group>"; };
+		FD803F772967521F001BC9B6 /* FrenchMosaic_512_normal.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = FrenchMosaic_512_normal.tiff; sourceTree = "<group>"; };
+		FD803F792968200D001BC9B6 /* OverlayScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayScene.swift; sourceTree = "<group>"; };
+		FD803F7B296847A3001BC9B6 /* AlgoritmA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgoritmA.swift; sourceTree = "<group>"; };
+		FD803F7D2968491E001BC9B6 /* BallNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallNode.swift; sourceTree = "<group>"; };
+		FD803F7F2968496D001BC9B6 /* BallColorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallColorType.swift; sourceTree = "<group>"; };
+		FD803F81296849D0001BC9B6 /* FloorNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorNode.swift; sourceTree = "<group>"; };
+		FD803F8429689B22001BC9B6 /* Ort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ort.swift; sourceTree = "<group>"; };
+		FD803F8629689BB6001BC9B6 /* Vec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vec.swift; sourceTree = "<group>"; };
+		FD803F8829689DCA001BC9B6 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FD803F472966275C001BC9B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FD803F412966275C001BC9B6 = {
+			isa = PBXGroup;
+			children = (
+				FD803F4C2966275C001BC9B6 /* MacOS-ColorLines */,
+				FD803F4B2966275C001BC9B6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FD803F4B2966275C001BC9B6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD803F4A2966275C001BC9B6 /* MacOS-ColorLines.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FD803F4C2966275C001BC9B6 /* MacOS-ColorLines */ = {
+			isa = PBXGroup;
+			children = (
+				FD803F6129662847001BC9B6 /* Scenes */,
+				FD803F602966282C001BC9B6 /* Texture */,
+				FD803F5D296627DA001BC9B6 /* ScenesViews */,
+				FD803F5A296627B1001BC9B6 /* Views */,
+				FD803F4D2966275C001BC9B6 /* AppDelegate.swift */,
+				FD803F4F2966275E001BC9B6 /* Assets.xcassets */,
+				FD803F512966275E001BC9B6 /* MainMenu.xib */,
+				FD803F542966275E001BC9B6 /* MacOS_ColorLines.entitlements */,
+			);
+			path = "MacOS-ColorLines";
+			sourceTree = "<group>";
+		};
+		FD803F5A296627B1001BC9B6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FD803F5B296627BF001BC9B6 /* RootView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FD803F5D296627DA001BC9B6 /* ScenesViews */ = {
+			isa = PBXGroup;
+			children = (
+				FD803F8329689AE6001BC9B6 /* AlgoritmA */,
+				FD803F5E296627EE001BC9B6 /* ScenesView.swift */,
+				FD803F792968200D001BC9B6 /* OverlayScene.swift */,
+				FD803F7D2968491E001BC9B6 /* BallNode.swift */,
+				FD803F7F2968496D001BC9B6 /* BallColorType.swift */,
+				FD803F81296849D0001BC9B6 /* FloorNode.swift */,
+			);
+			path = ScenesViews;
+			sourceTree = "<group>";
+		};
+		FD803F602966282C001BC9B6 /* Texture */ = {
+			isa = PBXGroup;
+			children = (
+				FD803F7429675210001BC9B6 /* Pole2 */,
+				FD803F6529662B95001BC9B6 /* Pole */,
+				FD803F6429662B8E001BC9B6 /* Ball1 */,
+			);
+			path = Texture;
+			sourceTree = "<group>";
+		};
+		FD803F6129662847001BC9B6 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				FD803F622966285D001BC9B6 /* SKScene.scnassets */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		FD803F6429662B8E001BC9B6 /* Ball1 */ = {
+			isa = PBXGroup;
+			children = (
+				FD803F6929662BA0001BC9B6 /* TexturesCom_Metal_SteelRough2_1K_albedo.tif */,
+				FD803F6629662BA0001BC9B6 /* TexturesCom_Metal_SteelRough2_1K_ao.tif */,
+				FD803F6A29662BA0001BC9B6 /* TexturesCom_Metal_SteelRough2_1K_metallic.tif */,
+				FD803F6729662BA0001BC9B6 /* TexturesCom_Metal_SteelRough2_1K_normal.tif */,
+				FD803F6829662BA0001BC9B6 /* TexturesCom_Metal_SteelRough2_1K_roughness.tif */,
+			);
+			path = Ball1;
+			sourceTree = "<group>";
+		};
+		FD803F6529662B95001BC9B6 /* Pole */ = {
+			isa = PBXGroup;
+			children = (
+				FD803F7229662D89001BC9B6 /* pole1.tiff */,
+			);
+			path = Pole;
+			sourceTree = "<group>";
+		};
+		FD803F7429675210001BC9B6 /* Pole2 */ = {
+			isa = PBXGroup;
+			children = (
+				FD803F772967521F001BC9B6 /* FrenchMosaic_512_normal.tiff */,
+				FD803F752967521A001BC9B6 /* FrenchMosaic_512_albedo.tiff */,
+			);
+			path = Pole2;
+			sourceTree = "<group>";
+		};
+		FD803F8329689AE6001BC9B6 /* AlgoritmA */ = {
+			isa = PBXGroup;
+			children = (
+				FD803F7B296847A3001BC9B6 /* AlgoritmA.swift */,
+				FD803F8429689B22001BC9B6 /* Ort.swift */,
+				FD803F8629689BB6001BC9B6 /* Vec.swift */,
+				FD803F8829689DCA001BC9B6 /* Point.swift */,
+			);
+			path = AlgoritmA;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FD803F492966275C001BC9B6 /* MacOS-ColorLines */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD803F572966275E001BC9B6 /* Build configuration list for PBXNativeTarget "MacOS-ColorLines" */;
+			buildPhases = (
+				FD803F462966275C001BC9B6 /* Sources */,
+				FD803F472966275C001BC9B6 /* Frameworks */,
+				FD803F482966275C001BC9B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MacOS-ColorLines";
+			productName = "MacOS-ColorLines";
+			productReference = FD803F4A2966275C001BC9B6 /* MacOS-ColorLines.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FD803F422966275C001BC9B6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					FD803F492966275C001BC9B6 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = FD803F452966275C001BC9B6 /* Build configuration list for PBXProject "MacOS-ColorLines" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FD803F412966275C001BC9B6;
+			productRefGroup = FD803F4B2966275C001BC9B6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FD803F492966275C001BC9B6 /* MacOS-ColorLines */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FD803F482966275C001BC9B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD803F502966275E001BC9B6 /* Assets.xcassets in Resources */,
+				FD803F6D29662BA0001BC9B6 /* TexturesCom_Metal_SteelRough2_1K_roughness.tif in Resources */,
+				FD803F762967521A001BC9B6 /* FrenchMosaic_512_albedo.tiff in Resources */,
+				FD803F6E29662BA0001BC9B6 /* TexturesCom_Metal_SteelRough2_1K_albedo.tif in Resources */,
+				FD803F6F29662BA0001BC9B6 /* TexturesCom_Metal_SteelRough2_1K_metallic.tif in Resources */,
+				FD803F632966285D001BC9B6 /* SKScene.scnassets in Resources */,
+				FD803F6B29662BA0001BC9B6 /* TexturesCom_Metal_SteelRough2_1K_ao.tif in Resources */,
+				FD803F782967521F001BC9B6 /* FrenchMosaic_512_normal.tiff in Resources */,
+				FD803F6C29662BA0001BC9B6 /* TexturesCom_Metal_SteelRough2_1K_normal.tif in Resources */,
+				FD803F532966275E001BC9B6 /* MainMenu.xib in Resources */,
+				FD803F7329662D89001BC9B6 /* pole1.tiff in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FD803F462966275C001BC9B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD803F7E2968491E001BC9B6 /* BallNode.swift in Sources */,
+				FD803F802968496D001BC9B6 /* BallColorType.swift in Sources */,
+				FD803F82296849D0001BC9B6 /* FloorNode.swift in Sources */,
+				FD803F5C296627BF001BC9B6 /* RootView.swift in Sources */,
+				FD803F7A2968200D001BC9B6 /* OverlayScene.swift in Sources */,
+				FD803F8529689B22001BC9B6 /* Ort.swift in Sources */,
+				FD803F8729689BB6001BC9B6 /* Vec.swift in Sources */,
+				FD803F8929689DCA001BC9B6 /* Point.swift in Sources */,
+				FD803F7C296847A3001BC9B6 /* AlgoritmA.swift in Sources */,
+				FD803F5F296627EE001BC9B6 /* ScenesView.swift in Sources */,
+				FD803F4E2966275C001BC9B6 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FD803F512966275E001BC9B6 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD803F522966275E001BC9B6 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FD803F552966275E001BC9B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FD803F562966275E001BC9B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		FD803F582966275E001BC9B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "MacOS-ColorLines/MacOS_ColorLines.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "we.MacOS-ColorLines";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FD803F592966275E001BC9B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "MacOS-ColorLines/MacOS_ColorLines.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "we.MacOS-ColorLines";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FD803F452966275C001BC9B6 /* Build configuration list for PBXProject "MacOS-ColorLines" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD803F552966275E001BC9B6 /* Debug */,
+				FD803F562966275E001BC9B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD803F572966275E001BC9B6 /* Build configuration list for PBXNativeTarget "MacOS-ColorLines" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD803F582966275E001BC9B6 /* Debug */,
+				FD803F592966275E001BC9B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FD803F422966275C001BC9B6 /* Project object */;
+}
