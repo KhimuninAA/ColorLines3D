@@ -334,11 +334,30 @@ extension SceneView{
                         
                         DispatchQueue.global().async { [weak self] in
                             if let self = self{
-                                let path = AlgoritmA.getPath(start: Point(x: selectBall.y, y: selectBall.x), end: Point(x: floorNode.y, y: floorNode.x), blocks: self.balls.points)
+                                let path = AlgoritmA.getPath(start: Point(x: selectBall.y, y: selectBall.x), end: Point(x: floorNode.y, y: floorNode.x), blocks: self.balls.points, isRnd: false)
+                                
+//                                print("PATH!!!")
+//                                var minPath = path
+//                                print("PATH Count: \(minPath?.count ?? 0)")
+//                                if let _ = minPath{
+//                                    for _ in 0...8{
+//                                        let newPath = AlgoritmA.getPath(start: Point(x: selectBall.y, y: selectBall.x), end: Point(x: floorNode.y, y: floorNode.x), blocks: self.balls.points, isRnd: true)
+//                                        if let newPath = newPath, let minCount = minPath?.count, minCount > newPath.count{
+//                                            minPath = newPath
+//                                        }
+//                                    }
+//                                }
+//                                print("PATH min count: \(minPath?.count ?? 0)")
+                                
+                                var minPath = path
+                                if let pth = AlgoritmA.getPath(start: Point(x: selectBall.y, y: selectBall.x), end: Point(x: floorNode.y, y: floorNode.x), blocks: self.balls.points){
+                                    minPath = pth
+                                }
+                                
                                 
                                 DispatchQueue.main.async { [weak self] in
                                     if let self = self{
-                                        if let path = path{
+                                        if let path = minPath{
                                             self.jampTick = 0
                                             self.selectBall = nil
                                             self.balls[index].x = floorNode.x

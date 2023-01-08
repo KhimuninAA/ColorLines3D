@@ -55,9 +55,14 @@ class AlgoritmA{
         return Ort.fullOrts(orts)
     }
     
-    private static func makeStartOpens(point: Point, end: Point) -> [Vec]{
+    private static func makeStartOpens(point: Point, end: Point, isRnd: Bool) -> [Vec]{
         var vec = [Vec]()
-        let orts = getOrts(from: point, to: end)
+        let orts: [Ort]
+        if isRnd{
+            orts = Ort.random()
+        }else{
+            orts = getOrts(from: point, to: end)
+        }
         for ort in orts{
             vec.append(Vec(point: point, ort: ort))
         }
@@ -65,8 +70,40 @@ class AlgoritmA{
     }
     
     static func getPath(start: Point, end: Point, blocks: [Point]) -> [Point]?{
+        var arr = AlgAArray(start: start, end: end, blocks: blocks, data: [AlgAData]())
+        let vecs = Vec.full(point: start)
+        for vec in vecs{
+            let data = AlgAData(id: 0, closed: [Vec](), opens: vecs, full: [Vec](), paths: [start], nextVec: vec)
+            arr.data.append(data)
+        }
+        return nextArray(arr)
+    }
+    
+    static func nextArray(_ array: AlgAArray) -> [Point]?{
+        var tempArray = array
+        for dataIndex in 0..<tempArray.data.count{
+            let vec = tempArray.data[dataIndex].nextVec
+            tempArray.data[dataIndex].opens = tempArray.data[dataIndex].opens.remove(vec: vec)
+            if let newPoint = vec.calcPoint{
+                if let _ = tempArray.blocks.firstIndex(where: {$0.x == newPoint.x && $0.y == newPoint.y}){
+                    tempArray.data[dataIndex].addClosed(vec: vec)
+                }else{
+                    
+                }
+            }
+            else{
+                tempArray.data[dataIndex].addClosed(vec: vec)
+            }
+        }
+
+        
+        //print(array)
+        return nil
+    }
+    
+    static func getPath(start: Point, end: Point, blocks: [Point], isRnd: Bool = false) -> [Point]?{
         var closed: [Vec] = [Vec]()
-        var opens: [Vec] = makeStartOpens(point: start, end: end)
+        var opens: [Vec] = makeStartOpens(point: start, end: end, isRnd: isRnd)
         var full: [Vec] = opens
         var paths: [Point] = [Point]()
         
@@ -106,7 +143,7 @@ class AlgoritmA{
                     if newPoint == end{
                         return paths
                     }else{
-                        let fullOpens = makeStartOpens(point: newPoint, end: end)
+                        let fullOpens = makeStartOpens(point: newPoint, end: end, isRnd: isRnd)
                         let realOpens = fullOpens.removeReverce(vec: vec)
                         addOpens(realOpens)
                     }

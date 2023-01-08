@@ -15,6 +15,19 @@ enum Ort{
 }
 
 extension Ort{
+    static func random() -> [Ort]{
+        var rsrs: [Ort] = [.left, .right, .up, .down]
+        var res: [Ort] = [Ort]()
+        
+        for i in stride(from: rsrs.count, to: 0, by: -1) {
+            let index = Int.random(in: 0..<i)
+            res.append(rsrs[index])
+            rsrs.remove(at: index)
+        }
+        
+        return res
+    }
+    
     var reverce: Ort{
         switch self{
         case .up:
@@ -42,7 +55,7 @@ extension Ort{
     }
     
     static func fullOrts(_ main: [Ort]) -> [Ort]{
-        var full: [Ort] = [.up, .down, .left, .right]
+        var full: [Ort] = full()
         for mainItem in main{
             if let index = full.firstIndex(where: {$0 == mainItem}){
                 full.remove(at: index)
@@ -52,6 +65,10 @@ extension Ort{
             full.append(main[index - 1])
         }
         return full
+    }
+    
+    static func full() -> [Ort]{
+        return [.up, .down, .left, .right]
     }
     
     var asString: String{

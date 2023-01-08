@@ -20,9 +20,32 @@ extension Vec{
         }
         return new
     }
+    
+    static func ==(lhs: Vec, rhs: Vec) -> Bool {
+        return lhs.point == rhs.point && lhs.ort == rhs.ort
+    }
+}
+
+extension Vec{
+    static func full(point: Point) -> [Vec]{
+        var res = [Vec]()
+        for ort in Ort.full(){
+            res.append(Vec(point: point, ort: ort))
+        }
+        return res
+    }
 }
 
 extension Array where Element == Vec {
+    func remove(vec: Vec) -> [Vec]{
+        if let index = self.firstIndex(where: {$0 == vec}){
+            var temp = self
+            temp.remove(at: index)
+            return temp
+        }
+        return self
+    }
+    
     func removeReverce(vec: Vec) -> [Vec]{
         let reverce = vec.ort.reverce
         if let index = self.firstIndex(where: {$0.ort == reverce}){
