@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		FD0D122F296AC22400A007A1 /* AlgAData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D122E296AC22400A007A1 /* AlgAData.swift */; };
+		FD436DB0296C641900B17F88 /* FindLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD436DAF296C641900B17F88 /* FindLine.swift */; };
+		FD436DB3296C64F400B17F88 /* CreateLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD436DB2296C64F400B17F88 /* CreateLevel.swift */; };
+		FD436DB5296C655200B17F88 /* CreateBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD436DB4296C655200B17F88 /* CreateBall.swift */; };
+		FD436DB7296C667D00B17F88 /* AddShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD436DB6296C667D00B17F88 /* AddShadow.swift */; };
+		FD436DB9296C678100B17F88 /* NextStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD436DB8296C678100B17F88 /* NextStep.swift */; };
+		FD436DBB296C67B900B17F88 /* IsFinish.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD436DBA296C67B900B17F88 /* IsFinish.swift */; };
+		FD436DBD296C681400B17F88 /* NewPos.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD436DBC296C681400B17F88 /* NewPos.swift */; };
+		FD436DC1296CA83200B17F88 /* crown.scn in Resources */ = {isa = PBXBuildFile; fileRef = FD436DC0296CA83200B17F88 /* crown.scn */; };
 		FD803F4E2966275C001BC9B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD803F4D2966275C001BC9B6 /* AppDelegate.swift */; };
 		FD803F502966275E001BC9B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD803F4F2966275E001BC9B6 /* Assets.xcassets */; };
 		FD803F532966275E001BC9B6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD803F512966275E001BC9B6 /* MainMenu.xib */; };
@@ -34,6 +42,14 @@
 
 /* Begin PBXFileReference section */
 		FD0D122E296AC22400A007A1 /* AlgAData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgAData.swift; sourceTree = "<group>"; };
+		FD436DAF296C641900B17F88 /* FindLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindLine.swift; sourceTree = "<group>"; };
+		FD436DB2296C64F400B17F88 /* CreateLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLevel.swift; sourceTree = "<group>"; };
+		FD436DB4296C655200B17F88 /* CreateBall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBall.swift; sourceTree = "<group>"; };
+		FD436DB6296C667D00B17F88 /* AddShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddShadow.swift; sourceTree = "<group>"; };
+		FD436DB8296C678100B17F88 /* NextStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextStep.swift; sourceTree = "<group>"; };
+		FD436DBA296C67B900B17F88 /* IsFinish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsFinish.swift; sourceTree = "<group>"; };
+		FD436DBC296C681400B17F88 /* NewPos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPos.swift; sourceTree = "<group>"; };
+		FD436DC0296CA83200B17F88 /* crown.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = crown.scn; sourceTree = "<group>"; };
 		FD803F4A2966275C001BC9B6 /* MacOS-ColorLines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MacOS-ColorLines.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD803F4D2966275C001BC9B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD803F4F2966275E001BC9B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -71,6 +87,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD436DB1296C64CE00B17F88 /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				FD436DAF296C641900B17F88 /* FindLine.swift */,
+				FD436DB2296C64F400B17F88 /* CreateLevel.swift */,
+				FD436DB4296C655200B17F88 /* CreateBall.swift */,
+				FD436DB6296C667D00B17F88 /* AddShadow.swift */,
+				FD436DB8296C678100B17F88 /* NextStep.swift */,
+				FD436DBA296C67B900B17F88 /* IsFinish.swift */,
+				FD436DBC296C681400B17F88 /* NewPos.swift */,
+			);
+			path = Games;
+			sourceTree = "<group>";
+		};
 		FD803F412966275C001BC9B6 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +143,7 @@
 		FD803F5D296627DA001BC9B6 /* ScenesViews */ = {
 			isa = PBXGroup;
 			children = (
+				FD436DB1296C64CE00B17F88 /* Games */,
 				FD803F8329689AE6001BC9B6 /* AlgoritmA */,
 				FD803F5E296627EE001BC9B6 /* ScenesView.swift */,
 				FD803F792968200D001BC9B6 /* OverlayScene.swift */,
@@ -136,6 +167,7 @@
 		FD803F6129662847001BC9B6 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				FD436DC0296CA83200B17F88 /* crown.scn */,
 				FD803F622966285D001BC9B6 /* SKScene.scnassets */,
 			);
 			path = Scenes;
@@ -249,6 +281,7 @@
 				FD803F6B29662BA0001BC9B6 /* TexturesCom_Metal_SteelRough2_1K_ao.tif in Resources */,
 				FD803F782967521F001BC9B6 /* FrenchMosaic_512_normal.tiff in Resources */,
 				FD803F6C29662BA0001BC9B6 /* TexturesCom_Metal_SteelRough2_1K_normal.tif in Resources */,
+				FD436DC1296CA83200B17F88 /* crown.scn in Resources */,
 				FD803F532966275E001BC9B6 /* MainMenu.xib in Resources */,
 				FD803F7329662D89001BC9B6 /* pole1.tiff in Resources */,
 			);
@@ -261,15 +294,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD436DBD296C681400B17F88 /* NewPos.swift in Sources */,
 				FD803F7E2968491E001BC9B6 /* BallNode.swift in Sources */,
 				FD803F802968496D001BC9B6 /* BallColorType.swift in Sources */,
 				FD803F82296849D0001BC9B6 /* FloorNode.swift in Sources */,
 				FD803F5C296627BF001BC9B6 /* RootView.swift in Sources */,
+				FD436DB0296C641900B17F88 /* FindLine.swift in Sources */,
+				FD436DB5296C655200B17F88 /* CreateBall.swift in Sources */,
+				FD436DBB296C67B900B17F88 /* IsFinish.swift in Sources */,
 				FD0D122F296AC22400A007A1 /* AlgAData.swift in Sources */,
+				FD436DB9296C678100B17F88 /* NextStep.swift in Sources */,
 				FD803F7A2968200D001BC9B6 /* OverlayScene.swift in Sources */,
 				FD803F8529689B22001BC9B6 /* Ort.swift in Sources */,
+				FD436DB7296C667D00B17F88 /* AddShadow.swift in Sources */,
 				FD803F8729689BB6001BC9B6 /* Vec.swift in Sources */,
 				FD803F8929689DCA001BC9B6 /* Point.swift in Sources */,
+				FD436DB3296C64F400B17F88 /* CreateLevel.swift in Sources */,
 				FD803F7C296847A3001BC9B6 /* AlgoritmA.swift in Sources */,
 				FD803F5F296627EE001BC9B6 /* ScenesView.swift in Sources */,
 				FD803F4E2966275C001BC9B6 /* AppDelegate.swift in Sources */,
