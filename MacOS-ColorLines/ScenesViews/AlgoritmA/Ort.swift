@@ -71,6 +71,17 @@ extension Ort{
         return [.up, .down, .left, .right]
     }
     
+    static func fullNoReverceValue(ort: Ort) -> [Ort] {
+        let reverceOrt = ort.reverce
+        var res = [Ort]()
+        for item in Ort.full(){
+            if item != reverceOrt{
+                res.append(item)
+            }
+        }
+        return res
+    }
+    
     var asString: String{
         switch self{
         case .up:

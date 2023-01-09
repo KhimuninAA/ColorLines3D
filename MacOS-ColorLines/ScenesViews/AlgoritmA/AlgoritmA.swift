@@ -70,34 +70,58 @@ class AlgoritmA{
     }
     
     static func getPath(start: Point, end: Point, blocks: [Point]) -> [Point]?{
-        var arr = AlgAArray(start: start, end: end, blocks: blocks, data: [AlgAData]())
+        var arr = AlgAArray(start: start, end: end, blocks: blocks, full: [Vec](), data: [AlgAData](), nextID: 0)
         let vecs = Vec.full(point: start)
         for vec in vecs{
-            let data = AlgAData(id: 0, closed: [Vec](), opens: vecs, full: [Vec](), paths: [start], nextVec: vec)
-            arr.data.append(data)
+            let id = arr.getNextID()
+            let data = AlgAData(id: id, paths: [start], nextVec: vec)
+            arr.addData(data: data)
         }
         return nextArray(arr)
     }
     
     static func nextArray(_ array: AlgAArray) -> [Point]?{
         var tempArray = array
-        for dataIndex in 0..<tempArray.data.count{
-            let vec = tempArray.data[dataIndex].nextVec
-            tempArray.data[dataIndex].opens = tempArray.data[dataIndex].opens.remove(vec: vec)
-            if let newPoint = vec.calcPoint{
-                if let _ = tempArray.blocks.firstIndex(where: {$0.x == newPoint.x && $0.y == newPoint.y}){
-                    tempArray.data[dataIndex].addClosed(vec: vec)
+        var removeIds = [Int]()
+        for data in tempArray.data{
+            if let index = tempArray.data.firstIndex(where: {$0.id == data.id }){
+                let vec = tempArray.data[index].nextVec
+                if let newPoint = vec.calcPoint{
+                    if let _ = tempArray.blocks.firstIndex(where: {$0.x == newPoint.x && $0.y == newPoint.y}){
+                        removeIds.append(data.id)
+                    }else{
+                        tempArray.data[index].paths.append(newPoint)
+                        if tempArray.isFinish(point: newPoint){
+                            return tempArray.data[index].paths
+                        }else{
+                            let orts = Ort.fullNoReverceValue(ort: vec.ort)
+                            for ort in orts{
+                                let points = tempArray.data[index].paths
+                                let newVec = Vec(point: newPoint, ort: ort)
+                                let id = tempArray.getNextID()
+                                let data = AlgAData(id: id, paths: points, nextVec: newVec)
+                                tempArray.addData(data: data)
+                            }
+                        }
+                    }
                 }else{
-                    
+                    removeIds.append(data.id)
                 }
             }
-            else{
-                tempArray.data[dataIndex].addClosed(vec: vec)
+        }
+        //Remove
+        for id in removeIds{
+            if let index = tempArray.data.firstIndex(where: {$0.id == id }){
+                tempArray.data.remove(at: index)
             }
         }
-
         
-        //print(array)
+        // Next step
+        if tempArray.data.count > 0{
+            return nextArray(tempArray)
+        }
+        
+        //Fail
         return nil
     }
     
