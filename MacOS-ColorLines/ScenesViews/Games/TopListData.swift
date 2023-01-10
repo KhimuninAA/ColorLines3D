@@ -8,7 +8,7 @@
 import Foundation
 
 struct TopListData{
-    let scores: [Int]
+    var scores: [Int]
 }
 
 extension TopListData{
@@ -18,6 +18,18 @@ extension TopListData{
 }
 
 class TopList{
+    static func setNewScore(score: Int){
+        var data = loadData()
+        data.scores.append(score)
+        data.scores = data.scores.sorted { $0 > $1 }
+        let newScores = data.scores.prefix(5)
+        data.scores = newScores.compactMap { $0 as? Int }
+//        if let arrS = data.scores as? Array<Int>{
+//            data.scores = arrS.p
+//        }
+        data.save()
+    }
+    
     static func loadData() -> TopListData{
         let loadedScores = UserDefaults.standard.array(forKey: "scoresArray") as? [Int] ?? [0, 0, 0, 0, 0]
         return TopListData(scores: loadedScores)

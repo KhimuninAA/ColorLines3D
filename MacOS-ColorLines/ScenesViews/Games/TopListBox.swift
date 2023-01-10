@@ -30,7 +30,7 @@ extension SceneView{
         let scoreMaterial = SCNMaterial()
         scoreMaterial.lightingModel = .physicallyBased
         scoreMaterial.isDoubleSided = false
-        scoreMaterial.diffuse.contents = NSColor.black
+        scoreMaterial.diffuse.contents = NSColor.yellow //black
         
         for i in 0..<data.scores.count{
             let score = data.scores[i]
@@ -40,9 +40,11 @@ extension SceneView{
 //            }
             let scoreLabelNode = SCNNode(geometry: scoreLabel)
             scoreLabelNode.geometry?.materials = [scoreMaterial]
+            scoreLabelNode.eulerAngles = SCNVector3(x: CGFloat.pi * 1.5, y: -CGFloat.pi * 0.5, z: 0)
             scoreLabelNode.scale = SCNVector3Make( 0.01, 0.01, 0.01);
-            scoreLabelNode.position = SCNVector3(1, 1, i + 1)
+            scoreLabelNode.position = SCNVector3(1 - CGFloat(i) * 0.5, 0.1, 1 - 2)
             boxNode.addChildNode(scoreLabelNode)
+            //scoreLabelNode.eulerAngles = SCNVector3(x: CGFloat.pi * 1.5, y: -CGFloat.pi * 0.5, z: 0)
         }
         
         return boxNode

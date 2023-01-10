@@ -37,6 +37,12 @@ class SceneView: SCNView{
     func moveCamera(){
         camNode = scene?.rootNode.childNode(withName: "camera", recursively: true)
         camNode?.position = SCNVector3Make(4.3, 12, 4)
+        camNode?.eulerAngles = SCNVector3(x: 0, y: -CGFloat.pi * 0.5, z: 0)
+                                          
+        Timer.scheduledTimer(withTimeInterval: 3, repeats: false, block: { [weak self] (_) in
+            let animation = SCNAction.rotateTo(x: -CGFloat.pi * 0.5, y: -CGFloat.pi * 0.5, z: 0, duration: 2)
+            self?.camNode?.runAction(animation)
+        })
     }
     
     func initScoreValue(){
@@ -101,7 +107,7 @@ extension SceneView{
         let result = hitTestResultForEvent(event)
         
         if let ballNode = result?.node, ballNode.name == "topListBox"{
-            let animation = SCNAction.move(to: SCNVector3(x: 20, y: ballNode.position.y, z: 4), duration: 0.2)
+            let animation = SCNAction.move(to: SCNVector3(x: 20, y: ballNode.position.y, z: 4), duration: 0.8)
             topListBoxNode?.runAction(animation, completionHandler: { [weak self] in
                 self?.topListBoxNode?.removeFromParentNode()
                 self?.topListBoxNode = nil
@@ -116,7 +122,7 @@ extension SceneView{
             topListBoxNode = ctrateTopListBox()
             if let topListBoxNode = topListBoxNode{
                 topListBoxNode.position = SCNVector3(20, 2, 4)
-                let animation = SCNAction.move(to: SCNVector3(x: 4, y: topListBoxNode.position.y, z: 4), duration: 0.2)
+                let animation = SCNAction.move(to: SCNVector3(x: 4, y: topListBoxNode.position.y, z: 4), duration: 0.5)
                 scene?.rootNode.addChildNode(topListBoxNode)
                 topListBoxNode.runAction(animation)
             }
@@ -130,6 +136,9 @@ extension SceneView{
                 ballNode.runAction(animation)
             })
             clearAllBalls(completionHandler: { [weak self] in
+                if let score = self?.score {
+                    TopList.setNewScore(score: score)
+                }
                 self?.score = 0
                 self?.updatePanel()
                 self?.nextStep()

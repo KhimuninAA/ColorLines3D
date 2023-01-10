@@ -11,7 +11,14 @@ import SceneKit
 extension SceneView{
     func isFinish(){
         if balls.count >= poleLevelSize * poleLevelSize {
-            clearAllBalls(completionHandler: nil)
+            clearAllBalls(completionHandler: { [weak self] in
+                if let score = self?.score {
+                    TopList.setNewScore(score: score)
+                }
+                self?.score = 0
+                self?.updatePanel()
+                self?.nextStep()
+            })
         }
     }
     
