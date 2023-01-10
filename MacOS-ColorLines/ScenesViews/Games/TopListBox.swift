@@ -10,6 +10,9 @@ import SceneKit
 
 extension SceneView{
     func ctrateTopListBox() -> SCNNode{
+        let data = TopList.loadData()
+        //data.save()
+        
         let imageMaterial = SCNMaterial()
         imageMaterial.lightingModel = .physicallyBased
         imageMaterial.isDoubleSided = false
@@ -23,6 +26,25 @@ extension SceneView{
         let boxNode = SCNNode(geometry: box)
         boxNode.geometry?.materials = [imageMaterial]
         boxNode.name = "topListBox"
+        
+        let scoreMaterial = SCNMaterial()
+        scoreMaterial.lightingModel = .physicallyBased
+        scoreMaterial.isDoubleSided = false
+        scoreMaterial.diffuse.contents = NSColor.black
+        
+        for i in 0..<data.scores.count{
+            let score = data.scores[i]
+            let scoreLabel: SCNGeometry? = SCNText(string: "\(i+1): \(score)", extrusionDepth: 0.7)
+//            if let scoreLabel = scoreLabel as? SCNText{
+//                scoreLabel.font = NSFont(name: "Helvatica", size: 0.5)
+//            }
+            let scoreLabelNode = SCNNode(geometry: scoreLabel)
+            scoreLabelNode.geometry?.materials = [scoreMaterial]
+            scoreLabelNode.scale = SCNVector3Make( 0.01, 0.01, 0.01);
+            scoreLabelNode.position = SCNVector3(1, 1, i + 1)
+            boxNode.addChildNode(scoreLabelNode)
+        }
+        
         return boxNode
     }
 }
