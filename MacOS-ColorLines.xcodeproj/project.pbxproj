@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF2F5F06296D3EEE004BE391 /* TexturesCom_CafePripyiat_1K_hdri_sphere.exr in Resources */ = {isa = PBXBuildFile; fileRef = BF2F5F05296D3EEE004BE391 /* TexturesCom_CafePripyiat_1K_hdri_sphere.exr */; };
+		BF2F5F0A296D3FED004BE391 /* TexturesCom_NorwayForestA_PineForest_A_1K_hdri_sphere.exr in Resources */ = {isa = PBXBuildFile; fileRef = BF2F5F09296D3FED004BE391 /* TexturesCom_NorwayForestA_PineForest_A_1K_hdri_sphere.exr */; };
 		FD0D122F296AC22400A007A1 /* AlgAData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D122E296AC22400A007A1 /* AlgAData.swift */; };
 		FD436DB0296C641900B17F88 /* FindLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD436DAF296C641900B17F88 /* FindLine.swift */; };
 		FD436DB3296C64F400B17F88 /* CreateLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD436DB2296C64F400B17F88 /* CreateLevel.swift */; };
@@ -41,6 +43,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF2F5F05296D3EEE004BE391 /* TexturesCom_CafePripyiat_1K_hdri_sphere.exr */ = {isa = PBXFileReference; lastKnownFileType = file; path = TexturesCom_CafePripyiat_1K_hdri_sphere.exr; sourceTree = "<group>"; };
+		BF2F5F09296D3FED004BE391 /* TexturesCom_NorwayForestA_PineForest_A_1K_hdri_sphere.exr */ = {isa = PBXFileReference; lastKnownFileType = file; path = TexturesCom_NorwayForestA_PineForest_A_1K_hdri_sphere.exr; sourceTree = "<group>"; };
 		FD0D122E296AC22400A007A1 /* AlgAData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgAData.swift; sourceTree = "<group>"; };
 		FD436DAF296C641900B17F88 /* FindLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindLine.swift; sourceTree = "<group>"; };
 		FD436DB2296C64F400B17F88 /* CreateLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLevel.swift; sourceTree = "<group>"; };
@@ -87,6 +91,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF2F5F04296D3EE5004BE391 /* Panorama */ = {
+			isa = PBXGroup;
+			children = (
+				BF2F5F09296D3FED004BE391 /* TexturesCom_NorwayForestA_PineForest_A_1K_hdri_sphere.exr */,
+				BF2F5F05296D3EEE004BE391 /* TexturesCom_CafePripyiat_1K_hdri_sphere.exr */,
+			);
+			path = Panorama;
+			sourceTree = "<group>";
+		};
 		FD436DB1296C64CE00B17F88 /* Games */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +170,7 @@
 		FD803F602966282C001BC9B6 /* Texture */ = {
 			isa = PBXGroup;
 			children = (
+				BF2F5F04296D3EE5004BE391 /* Panorama */,
 				FD803F7429675210001BC9B6 /* Pole2 */,
 				FD803F6529662B95001BC9B6 /* Pole */,
 				FD803F6429662B8E001BC9B6 /* Ball1 */,
@@ -274,11 +288,13 @@
 			files = (
 				FD803F502966275E001BC9B6 /* Assets.xcassets in Resources */,
 				FD803F6D29662BA0001BC9B6 /* TexturesCom_Metal_SteelRough2_1K_roughness.tif in Resources */,
+				BF2F5F0A296D3FED004BE391 /* TexturesCom_NorwayForestA_PineForest_A_1K_hdri_sphere.exr in Resources */,
 				FD803F762967521A001BC9B6 /* FrenchMosaic_512_albedo.tiff in Resources */,
 				FD803F6E29662BA0001BC9B6 /* TexturesCom_Metal_SteelRough2_1K_albedo.tif in Resources */,
 				FD803F6F29662BA0001BC9B6 /* TexturesCom_Metal_SteelRough2_1K_metallic.tif in Resources */,
 				FD803F632966285D001BC9B6 /* SKScene.scnassets in Resources */,
 				FD803F6B29662BA0001BC9B6 /* TexturesCom_Metal_SteelRough2_1K_ao.tif in Resources */,
+				BF2F5F06296D3EEE004BE391 /* TexturesCom_CafePripyiat_1K_hdri_sphere.exr in Resources */,
 				FD803F782967521F001BC9B6 /* FrenchMosaic_512_normal.tiff in Resources */,
 				FD803F6C29662BA0001BC9B6 /* TexturesCom_Metal_SteelRough2_1K_normal.tif in Resources */,
 				FD436DC1296CA83200B17F88 /* crown.scn in Resources */,
@@ -453,6 +469,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.board-games";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainNibFile = MainMenu;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -460,6 +477,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "we.MacOS-ColorLines";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -478,6 +496,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.board-games";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainNibFile = MainMenu;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -485,6 +504,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "we.MacOS-ColorLines";
 				PRODUCT_NAME = "$(TARGET_NAME)";

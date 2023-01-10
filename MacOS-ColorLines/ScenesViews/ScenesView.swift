@@ -99,8 +99,20 @@ extension SceneView{
     override func mouseDown(with event: NSEvent) {
         let result = hitTestResultForEvent(event)
         
-        if let ballNode = result?.node, ballNode.name == "newGameBtn"{
+        if let ballNode = result?.node, ballNode.name == "crownBlock"{
+            print("")
+        }
+        
+        if let ballNode = result?.node, ballNode.name == "newGameBtn" || ballNode.name == "NewGameLabel"{
+            let ballPos = ballNode.position
+            let animation = SCNAction.move(to: SCNVector3(x: ballPos.x, y: ballPos.y - 0.3, z: ballPos.z), duration: 0.2)
+            ballNode.runAction(animation, completionHandler: {
+                let animation = SCNAction.move(to: ballPos, duration: 0.2)
+                ballNode.runAction(animation)
+            })
             clearAllBalls(completionHandler: { [weak self] in
+                self?.score = 0
+                self?.updatePanel()
                 self?.nextStep()
             })
         }
