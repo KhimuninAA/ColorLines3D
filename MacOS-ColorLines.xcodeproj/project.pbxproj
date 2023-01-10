@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BF2F5F06296D3EEE004BE391 /* TexturesCom_CafePripyiat_1K_hdri_sphere.exr in Resources */ = {isa = PBXBuildFile; fileRef = BF2F5F05296D3EEE004BE391 /* TexturesCom_CafePripyiat_1K_hdri_sphere.exr */; };
 		BF2F5F0A296D3FED004BE391 /* TexturesCom_NorwayForestA_PineForest_A_1K_hdri_sphere.exr in Resources */ = {isa = PBXBuildFile; fileRef = BF2F5F09296D3FED004BE391 /* TexturesCom_NorwayForestA_PineForest_A_1K_hdri_sphere.exr */; };
+		BF2F5F0D296D6B85004BE391 /* TopListBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2F5F0C296D6B85004BE391 /* TopListBox.swift */; };
 		FD0D122F296AC22400A007A1 /* AlgAData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D122E296AC22400A007A1 /* AlgAData.swift */; };
 		FD436DB0296C641900B17F88 /* FindLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD436DAF296C641900B17F88 /* FindLine.swift */; };
 		FD436DB3296C64F400B17F88 /* CreateLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD436DB2296C64F400B17F88 /* CreateLevel.swift */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		BF2F5F05296D3EEE004BE391 /* TexturesCom_CafePripyiat_1K_hdri_sphere.exr */ = {isa = PBXFileReference; lastKnownFileType = file; path = TexturesCom_CafePripyiat_1K_hdri_sphere.exr; sourceTree = "<group>"; };
 		BF2F5F09296D3FED004BE391 /* TexturesCom_NorwayForestA_PineForest_A_1K_hdri_sphere.exr */ = {isa = PBXFileReference; lastKnownFileType = file; path = TexturesCom_NorwayForestA_PineForest_A_1K_hdri_sphere.exr; sourceTree = "<group>"; };
+		BF2F5F0C296D6B85004BE391 /* TopListBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListBox.swift; sourceTree = "<group>"; };
 		FD0D122E296AC22400A007A1 /* AlgAData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgAData.swift; sourceTree = "<group>"; };
 		FD436DAF296C641900B17F88 /* FindLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindLine.swift; sourceTree = "<group>"; };
 		FD436DB2296C64F400B17F88 /* CreateLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLevel.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				FD436DB8296C678100B17F88 /* NextStep.swift */,
 				FD436DBA296C67B900B17F88 /* IsFinish.swift */,
 				FD436DBC296C681400B17F88 /* NewPos.swift */,
+				BF2F5F0C296D6B85004BE391 /* TopListBox.swift */,
 			);
 			path = Games;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				FD436DBD296C681400B17F88 /* NewPos.swift in Sources */,
 				FD803F7E2968491E001BC9B6 /* BallNode.swift in Sources */,
 				FD803F802968496D001BC9B6 /* BallColorType.swift in Sources */,
+				BF2F5F0D296D6B85004BE391 /* TopListBox.swift in Sources */,
 				FD803F82296849D0001BC9B6 /* FloorNode.swift in Sources */,
 				FD803F5C296627BF001BC9B6 /* RootView.swift in Sources */,
 				FD436DB0296C641900B17F88 /* FindLine.swift in Sources */,

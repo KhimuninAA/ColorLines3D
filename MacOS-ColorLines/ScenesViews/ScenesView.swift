@@ -16,6 +16,7 @@ class SceneView: SCNView{
     var lightNode: SCNNode?
     var camNode: SCNNode?
     var scoreValueNode: SCNNode?
+    var topListBoxNode: SCNNode?
     
     var balls: [BallNode] = [BallNode]()
     var overlayScene: OverlayScene?
@@ -99,8 +100,26 @@ extension SceneView{
     override func mouseDown(with event: NSEvent) {
         let result = hitTestResultForEvent(event)
         
-        if let ballNode = result?.node, ballNode.name == "crownBlock"{
-            print("")
+        if let ballNode = result?.node, ballNode.name == "topListBox"{
+            let animation = SCNAction.move(to: SCNVector3(x: 20, y: ballNode.position.y, z: 4), duration: 0.2)
+            topListBoxNode?.runAction(animation, completionHandler: { [weak self] in
+                self?.topListBoxNode?.removeFromParentNode()
+                self?.topListBoxNode = nil
+            })
+        }
+        
+        if topListBoxNode != nil{
+            return
+        }
+        
+        if let ballNode = result?.node, ballNode.name == "score"{
+            topListBoxNode = ctrateTopListBox()
+            if let topListBoxNode = topListBoxNode{
+                topListBoxNode.position = SCNVector3(20, 2, 4)
+                let animation = SCNAction.move(to: SCNVector3(x: 4, y: topListBoxNode.position.y, z: 4), duration: 0.2)
+                scene?.rootNode.addChildNode(topListBoxNode)
+                topListBoxNode.runAction(animation)
+            }
         }
         
         if let ballNode = result?.node, ballNode.name == "newGameBtn" || ballNode.name == "NewGameLabel"{
