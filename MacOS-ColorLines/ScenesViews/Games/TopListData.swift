@@ -23,10 +23,7 @@ class TopList{
         data.scores.append(score)
         data.scores = data.scores.sorted { $0 > $1 }
         let newScores = data.scores.prefix(5)
-        data.scores = newScores.compactMap { $0 as? Int }
-//        if let arrS = data.scores as? Array<Int>{
-//            data.scores = arrS.p
-//        }
+        data.scores = newScores.compactMap { $0 } //{ $0 as? Int }
         data.save()
     }
     
