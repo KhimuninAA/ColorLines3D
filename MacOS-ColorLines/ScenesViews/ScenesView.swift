@@ -17,6 +17,8 @@ class SceneView: SCNView{
     var camNode: SCNNode?
     var scoreValueNode: SCNNode?
     var topListBoxNode: SCNNode?
+    var nextBallColorNodes: [SCNNode] = [SCNNode]()
+    var nextBallColor: [BallColorType] = [BallColorType]()
     
     var balls: [BallNode] = [BallNode]()
     var overlayScene: OverlayScene?
@@ -64,6 +66,7 @@ class SceneView: SCNView{
         scene = SCNScene(named: "SKScene.scnassets/ColorLines.scn")
         
         moveCamera()
+        findNextBallColors()
         initScoreValue()
         
         addShadow()
@@ -75,7 +78,7 @@ class SceneView: SCNView{
 //            overlayScene.scaleMode = .resizeFill
 //            self.overlaySKScene = overlayScene
 //        }
-        
+        newBallColors()
         nextStep()
     }
 }

@@ -21,12 +21,15 @@ extension SceneView{
             newBallCount = freePole
         }
         
-        for _ in 0..<newBallCount{
-            let colorType = BallColorType.random()
+        for i in 0..<newBallCount{
+            let colorType = nextBallColor[i] //BallColorType.random()
             let pos = newPos()
             createBall(colorType: colorType, x: pos.x, y: pos.y)
-            
         }
+        
+        newBallColors()
+        setNextBallColors()
+        
         if findLine() {
             return
         }
