@@ -12,6 +12,7 @@
 		BF2F5F0D296D6B85004BE391 /* TopListBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2F5F0C296D6B85004BE391 /* TopListBox.swift */; };
 		BF2F5F0F296D91FD004BE391 /* TopListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2F5F0E296D91FD004BE391 /* TopListData.swift */; };
 		BF2F5F11296E7AF6004BE391 /* NextBallColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2F5F10296E7AF6004BE391 /* NextBallColors.swift */; };
+		BF2F5F13296E9EA5004BE391 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2F5F12296E9EA5004BE391 /* AboutView.swift */; };
 		FD0D122F296AC22400A007A1 /* AlgAData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D122E296AC22400A007A1 /* AlgAData.swift */; };
 		FD436DB0296C641900B17F88 /* FindLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD436DAF296C641900B17F88 /* FindLine.swift */; };
 		FD436DB3296C64F400B17F88 /* CreateLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD436DB2296C64F400B17F88 /* CreateLevel.swift */; };
@@ -51,6 +52,7 @@
 		BF2F5F0C296D6B85004BE391 /* TopListBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListBox.swift; sourceTree = "<group>"; };
 		BF2F5F0E296D91FD004BE391 /* TopListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListData.swift; sourceTree = "<group>"; };
 		BF2F5F10296E7AF6004BE391 /* NextBallColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextBallColors.swift; sourceTree = "<group>"; };
+		BF2F5F12296E9EA5004BE391 /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		FD0D122E296AC22400A007A1 /* AlgAData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgAData.swift; sourceTree = "<group>"; };
 		FD436DAF296C641900B17F88 /* FindLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindLine.swift; sourceTree = "<group>"; };
 		FD436DB2296C64F400B17F88 /* CreateLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLevel.swift; sourceTree = "<group>"; };
@@ -60,7 +62,7 @@
 		FD436DBA296C67B900B17F88 /* IsFinish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsFinish.swift; sourceTree = "<group>"; };
 		FD436DBC296C681400B17F88 /* NewPos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPos.swift; sourceTree = "<group>"; };
 		FD436DC0296CA83200B17F88 /* crown.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = crown.scn; sourceTree = "<group>"; };
-		FD803F4A2966275C001BC9B6 /* MacOS-ColorLines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MacOS-ColorLines.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD803F4A2966275C001BC9B6 /* ColorLines3D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorLines3D.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD803F4D2966275C001BC9B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD803F4F2966275E001BC9B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD803F522966275E001BC9B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -134,7 +136,7 @@
 		FD803F4B2966275C001BC9B6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FD803F4A2966275C001BC9B6 /* MacOS-ColorLines.app */,
+				FD803F4A2966275C001BC9B6 /* ColorLines3D.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,6 +159,7 @@
 		FD803F5A296627B1001BC9B6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BF2F5F12296E9EA5004BE391 /* AboutView.swift */,
 				FD803F5B296627BF001BC9B6 /* RootView.swift */,
 			);
 			path = Views;
@@ -240,9 +243,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FD803F492966275C001BC9B6 /* MacOS-ColorLines */ = {
+		FD803F492966275C001BC9B6 /* ColorLines3D */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FD803F572966275E001BC9B6 /* Build configuration list for PBXNativeTarget "MacOS-ColorLines" */;
+			buildConfigurationList = FD803F572966275E001BC9B6 /* Build configuration list for PBXNativeTarget "ColorLines3D" */;
 			buildPhases = (
 				FD803F462966275C001BC9B6 /* Sources */,
 				FD803F472966275C001BC9B6 /* Frameworks */,
@@ -252,9 +255,9 @@
 			);
 			dependencies = (
 			);
-			name = "MacOS-ColorLines";
+			name = ColorLines3D;
 			productName = "MacOS-ColorLines";
-			productReference = FD803F4A2966275C001BC9B6 /* MacOS-ColorLines.app */;
+			productReference = FD803F4A2966275C001BC9B6 /* ColorLines3D.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -285,7 +288,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FD803F492966275C001BC9B6 /* MacOS-ColorLines */,
+				FD803F492966275C001BC9B6 /* ColorLines3D */,
 			);
 		};
 /* End PBXProject section */
@@ -332,6 +335,7 @@
 				FD0D122F296AC22400A007A1 /* AlgAData.swift in Sources */,
 				FD436DB9296C678100B17F88 /* NextStep.swift in Sources */,
 				FD803F7A2968200D001BC9B6 /* OverlayScene.swift in Sources */,
+				BF2F5F13296E9EA5004BE391 /* AboutView.swift in Sources */,
 				FD803F8529689B22001BC9B6 /* Ort.swift in Sources */,
 				FD436DB7296C667D00B17F88 /* AddShadow.swift in Sources */,
 				BF2F5F0F296D91FD004BE391 /* TopListData.swift in Sources */,
@@ -537,7 +541,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FD803F572966275E001BC9B6 /* Build configuration list for PBXNativeTarget "MacOS-ColorLines" */ = {
+		FD803F572966275E001BC9B6 /* Build configuration list for PBXNativeTarget "ColorLines3D" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FD803F582966275E001BC9B6 /* Debug */,
