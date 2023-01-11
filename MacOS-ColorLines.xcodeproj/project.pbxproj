@@ -13,6 +13,7 @@
 		BF2F5F0F296D91FD004BE391 /* TopListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2F5F0E296D91FD004BE391 /* TopListData.swift */; };
 		BF2F5F11296E7AF6004BE391 /* NextBallColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2F5F10296E7AF6004BE391 /* NextBallColors.swift */; };
 		BF2F5F13296E9EA5004BE391 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2F5F12296E9EA5004BE391 /* AboutView.swift */; };
+		BF378E91296EB6DC00B6B46C /* ExtActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF378E90296EB6DC00B6B46C /* ExtActions.swift */; };
 		FD0D122F296AC22400A007A1 /* AlgAData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D122E296AC22400A007A1 /* AlgAData.swift */; };
 		FD436DB0296C641900B17F88 /* FindLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD436DAF296C641900B17F88 /* FindLine.swift */; };
 		FD436DB3296C64F400B17F88 /* CreateLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD436DB2296C64F400B17F88 /* CreateLevel.swift */; };
@@ -53,6 +54,7 @@
 		BF2F5F0E296D91FD004BE391 /* TopListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListData.swift; sourceTree = "<group>"; };
 		BF2F5F10296E7AF6004BE391 /* NextBallColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextBallColors.swift; sourceTree = "<group>"; };
 		BF2F5F12296E9EA5004BE391 /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		BF378E90296EB6DC00B6B46C /* ExtActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtActions.swift; sourceTree = "<group>"; };
 		FD0D122E296AC22400A007A1 /* AlgAData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgAData.swift; sourceTree = "<group>"; };
 		FD436DAF296C641900B17F88 /* FindLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindLine.swift; sourceTree = "<group>"; };
 		FD436DB2296C64F400B17F88 /* CreateLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLevel.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				BF2F5F0C296D6B85004BE391 /* TopListBox.swift */,
 				BF2F5F0E296D91FD004BE391 /* TopListData.swift */,
 				BF2F5F10296E7AF6004BE391 /* NextBallColors.swift */,
+				BF378E90296EB6DC00B6B46C /* ExtActions.swift */,
 			);
 			path = Games;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				FD803F8929689DCA001BC9B6 /* Point.swift in Sources */,
 				FD436DB3296C64F400B17F88 /* CreateLevel.swift in Sources */,
 				FD803F7C296847A3001BC9B6 /* AlgoritmA.swift in Sources */,
+				BF378E91296EB6DC00B6B46C /* ExtActions.swift in Sources */,
 				FD803F5F296627EE001BC9B6 /* ScenesView.swift in Sources */,
 				FD803F4E2966275C001BC9B6 /* AppDelegate.swift in Sources */,
 			);

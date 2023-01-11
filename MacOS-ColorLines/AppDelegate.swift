@@ -64,5 +64,18 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
             preferenceWindow?.makeKeyAndOrderFront(self)
         }
     }
+    
+    @IBAction func newGame(_ sender: Any) {
+        rootView?.newGame()
+    }
+    
+    
+    @IBAction func nextStep(_ sender: Any) {
+        rootView?.nextStep()
+    }
+    
+    @IBAction func showTopList(_ sender: Any) {
+        rootView?.showTopList()
+    }
 }
 

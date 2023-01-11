@@ -31,7 +31,7 @@
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                            <menuItem title="Quit MacOS-ColorLines" keyEquivalent="q" id="4sb-4s-VLi">
+                            <menuItem title="Quit ColorLines3D" keyEquivalent="q" id="4sb-4s-VLi">
                                 <connections>
                                     <action selector="terminate:" target="-1" id="Te7-pn-YzF"/>
                                 </connections>
@@ -45,12 +45,12 @@
                         <items>
                             <menuItem title="New game" keyEquivalent="n" id="Was-JA-tGl" userLabel="New game">
                                 <connections>
-                                    <action selector="newDocument:" target="-1" id="4Si-XN-c54"/>
+                                    <action selector="newGame:" target="Voe-Tx-rLC" id="SmL-sV-0GW"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="Next step" keyEquivalent="o" id="IAo-SY-fd9" userLabel="Next step">
                                 <connections>
-                                    <action selector="openDocument:" target="-1" id="bVn-NM-KNZ"/>
+                                    <action selector="nextStep:" target="Voe-Tx-rLC" id="nZQ-PB-W8a"/>
                                 </connections>
                             </menuItem>
                         </items>
@@ -60,6 +60,11 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="View" id="HyV-fh-RgO">
                         <items>
+                            <menuItem title="Show top list" keyEquivalent="t" id="1AI-aP-cMb">
+                                <connections>
+                                    <action selector="showTopList:" target="Voe-Tx-rLC" id="bW1-jX-eeP"/>
+                                </connections>
+                            </menuItem>
                             <menuItem title="Enter Full Screen" keyEquivalent="f" id="4J7-dP-txa">
                                 <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
                                 <connections>

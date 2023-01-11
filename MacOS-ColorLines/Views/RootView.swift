@@ -10,7 +10,7 @@ import AppKit
 import SceneKit
 
 class RootView: NSView{
-    private var scene :SCNView?
+    private var scene :SceneView?
     
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
@@ -40,5 +40,18 @@ class RootView: NSView{
         if let scene = scene as? SceneView{
             scene.resizeView()
         }
+    }
+    
+    func newGame() {
+        scene?.extNewGame()
+    }
+    
+    
+    func nextStep() {
+        scene?.extNextStep()
+    }
+    
+    func showTopList(){
+        scene?.extShowTopList()
     }
 }
