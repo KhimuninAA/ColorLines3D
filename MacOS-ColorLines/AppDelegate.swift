@@ -77,5 +77,15 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
     @IBAction func showTopList(_ sender: Any) {
         rootView?.showTopList()
     }
+    
+    @IBAction func showHelp(_ sender: Any) {
+        if let mainSize = NSScreen.main?.frame.size{
+            let helpSize = CGSize(width: 400, height: 650)
+            let helpFrame = CGRect(x: 0.5 * (mainSize.width - helpSize.width), y: 0.5 * (mainSize.height - helpSize.height), width: helpSize.width, height: helpSize.height)
+            let helpView = HelpView(frame: helpFrame)
+            openInWindow(view: helpView, rect: helpFrame, title: "О программе", isShowBar: true)
+            preferenceWindow?.makeKeyAndOrderFront(self)
+        }
+    }
 }
 

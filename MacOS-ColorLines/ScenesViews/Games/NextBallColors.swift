@@ -29,6 +29,15 @@ extension SceneView{
                 ballMaterial.isDoubleSided = false
                 ballMaterial.diffuse.contents = NSColor.white
                 
+//                let ballMaterial = SCNMaterial()
+//                ballMaterial.lightingModel = .physicallyBased
+//                ballMaterial.isDoubleSided = false
+//                ballMaterial.diffuse.contents = NSColor.white
+//                ballMaterial.normal.contents = NSImage(named: "TexturesCom_Metal_SteelRough2_1K_normal")
+//                ballMaterial.metalness.contents = NSImage(named: "TexturesCom_Metal_SteelRough2_1K_metallic")
+//                ballMaterial.roughness.contents = NSImage(named: "TexturesCom_Metal_SteelRough2_1K_roughness")
+//                ballMaterial.ambientOcclusion.contents = NSImage(named: "TexturesCom_Metal_SteelRough2_1K_ao")
+                
                 let ballGeo: SCNGeometry? = SCNSphere(radius: 0.2)
                 let ballNode = SCNNode(geometry: ballGeo)
                 ballNode.geometry?.materials = [ballMaterial]

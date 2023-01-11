@@ -41,10 +41,10 @@ class SceneView: SCNView{
         camNode?.position = SCNVector3Make(4.3, 12, 4)
         camNode?.eulerAngles = SCNVector3(x: 0, y: -CGFloat.pi * 0.5, z: 0)
                                           
-        Timer.scheduledTimer(withTimeInterval: 3, repeats: false, block: { [weak self] (_) in
-            let animation = SCNAction.rotateTo(x: -CGFloat.pi * 0.5, y: -CGFloat.pi * 0.5, z: 0, duration: 2)
-            self?.camNode?.runAction(animation)
-        })
+//        Timer.scheduledTimer(withTimeInterval: 3, repeats: false, block: { [weak self] (_) in
+//            let animation = SCNAction.rotateTo(x: -CGFloat.pi * 0.5, y: -CGFloat.pi * 0.5, z: 0, duration: 2)
+//            self?.camNode?.runAction(animation)
+//        })
     }
     
     func initScoreValue(){
@@ -129,6 +129,11 @@ extension SceneView{
                 scene?.rootNode.addChildNode(topListBoxNode)
                 topListBoxNode.runAction(animation)
             }
+        }
+        
+        if let ballNode = result?.node, ballNode.name == "startBtn"{
+            let animation = SCNAction.rotateTo(x: -CGFloat.pi * 0.5, y: -CGFloat.pi * 0.5, z: 0, duration: 0.8)
+            camNode?.runAction(animation)
         }
         
         if let ballNode = result?.node, ballNode.name == "newGameBtn" || ballNode.name == "NewGameLabel"{
