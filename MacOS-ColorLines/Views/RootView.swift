@@ -36,10 +36,7 @@ class RootView: NSView{
         let selfSize = frame.size
         
         scene?.frame = CGRect(x: 0, y: 0, width: selfSize.width, height: selfSize.height)
-        
-        if let scene = scene as? SceneView{
-            scene.resizeView()
-        }
+        scene?.resizeView()
     }
     
     func newGame() {
