@@ -64,6 +64,9 @@ class SceneView: SCNView{
         self.isPlaying = true
         
         scene = SCNScene(named: "SKScene.scnassets/ColorLines.scn")
+
+        //Show info
+        //self.showsStatistics = true
         
         moveCamera()
         findNextBallColors()
@@ -107,6 +110,7 @@ extension SceneView: SCNSceneRendererDelegate{
 
 extension SceneView{
     override func mouseDown(with event: NSEvent) {
+        super.mouseDown(with: event)
         let result = hitTestResultForEvent(event)
         
         if let ballNode = result?.node, ballNode.name == "topListBox"{
