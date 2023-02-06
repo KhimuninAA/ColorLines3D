@@ -16,12 +16,14 @@ extension SceneView{
         
         func isLine(){
             if lineBalls.count >= 5{
+                scene!.removeAllParticleSystems()
                 score += lineBalls.count * 2
                 updatePanel()
                 isLineFinding = true
                 //Animation
                 let animation = SCNAction.scale(to: 0, duration: 0.3)
                 for ball in lineBalls{
+                    self.addParticles(with: .stars, withTransform: ball.worldTransform, color: ball.colorType.color)
                     ball.runAction(animation, completionHandler: { [weak self] in
                         if let self = self{
                             if let index = self.balls.firstIndex(where: {$0.x == ball.x && $0.y == ball.y}){

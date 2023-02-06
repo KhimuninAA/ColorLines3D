@@ -15,6 +15,8 @@
 		BF2F5F13296E9EA5004BE391 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2F5F12296E9EA5004BE391 /* AboutView.swift */; };
 		BF378E91296EB6DC00B6B46C /* ExtActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF378E90296EB6DC00B6B46C /* ExtActions.swift */; };
 		FD0D122F296AC22400A007A1 /* AlgAData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0D122E296AC22400A007A1 /* AlgAData.swift */; };
+		FD4037B62991849C0015004D /* env_star.png in Resources */ = {isa = PBXBuildFile; fileRef = FD4037B52991849C0015004D /* env_star.png */; };
+		FD4037B82991873E0015004D /* Particle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4037B72991873E0015004D /* Particle.swift */; };
 		FD436DB0296C641900B17F88 /* FindLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD436DAF296C641900B17F88 /* FindLine.swift */; };
 		FD436DB3296C64F400B17F88 /* CreateLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD436DB2296C64F400B17F88 /* CreateLevel.swift */; };
 		FD436DB5296C655200B17F88 /* CreateBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD436DB4296C655200B17F88 /* CreateBall.swift */; };
@@ -23,6 +25,11 @@
 		FD436DBB296C67B900B17F88 /* IsFinish.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD436DBA296C67B900B17F88 /* IsFinish.swift */; };
 		FD436DBD296C681400B17F88 /* NewPos.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD436DBC296C681400B17F88 /* NewPos.swift */; };
 		FD436DC1296CA83200B17F88 /* crown.scn in Resources */ = {isa = PBXBuildFile; fileRef = FD436DC0296CA83200B17F88 /* crown.scn */; };
+		FD6711E3297B03CA00B330C4 /* metal-ball-rolling-sound-effect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FD6711E2297B03CA00B330C4 /* metal-ball-rolling-sound-effect.mp3 */; };
+		FD6711E5297B072600B330C4 /* ball1.mov in Resources */ = {isa = PBXBuildFile; fileRef = FD6711E4297B072600B330C4 /* ball1.mov */; };
+		FD6711E7297B07A300B330C4 /* ball2.mov in Resources */ = {isa = PBXBuildFile; fileRef = FD6711E6297B07A300B330C4 /* ball2.mov */; };
+		FD6711E9297B082E00B330C4 /* ball3.mov in Resources */ = {isa = PBXBuildFile; fileRef = FD6711E8297B082E00B330C4 /* ball3.mov */; };
+		FD6711EB297B11A800B330C4 /* be_metal_plate_surface_15801.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FD6711EA297B11A800B330C4 /* be_metal_plate_surface_15801.mp3 */; };
 		FD803F4E2966275C001BC9B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD803F4D2966275C001BC9B6 /* AppDelegate.swift */; };
 		FD803F502966275E001BC9B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD803F4F2966275E001BC9B6 /* Assets.xcassets */; };
 		FD803F532966275E001BC9B6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD803F512966275E001BC9B6 /* MainMenu.xib */; };
@@ -46,6 +53,8 @@
 		FD803F8729689BB6001BC9B6 /* Vec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD803F8629689BB6001BC9B6 /* Vec.swift */; };
 		FD803F8929689DCA001BC9B6 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD803F8829689DCA001BC9B6 /* Point.swift */; };
 		FDD37EEF296F1BC4003470DC /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD37EEE296F1BC4003470DC /* HelpView.swift */; };
+		FDEED628298BD7E300E359AD /* GameplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDEED627298BD7E300E359AD /* GameplayKit.framework */; };
+		FDEED62A298BDA6D00E359AD /* AVFAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDEED629298BDA6D00E359AD /* AVFAudio.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +66,8 @@
 		BF2F5F12296E9EA5004BE391 /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		BF378E90296EB6DC00B6B46C /* ExtActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtActions.swift; sourceTree = "<group>"; };
 		FD0D122E296AC22400A007A1 /* AlgAData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgAData.swift; sourceTree = "<group>"; };
+		FD4037B52991849C0015004D /* env_star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = env_star.png; sourceTree = "<group>"; };
+		FD4037B72991873E0015004D /* Particle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Particle.swift; sourceTree = "<group>"; };
 		FD436DAF296C641900B17F88 /* FindLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindLine.swift; sourceTree = "<group>"; };
 		FD436DB2296C64F400B17F88 /* CreateLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLevel.swift; sourceTree = "<group>"; };
 		FD436DB4296C655200B17F88 /* CreateBall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBall.swift; sourceTree = "<group>"; };
@@ -65,6 +76,11 @@
 		FD436DBA296C67B900B17F88 /* IsFinish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsFinish.swift; sourceTree = "<group>"; };
 		FD436DBC296C681400B17F88 /* NewPos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPos.swift; sourceTree = "<group>"; };
 		FD436DC0296CA83200B17F88 /* crown.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = crown.scn; sourceTree = "<group>"; };
+		FD6711E2297B03CA00B330C4 /* metal-ball-rolling-sound-effect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "metal-ball-rolling-sound-effect.mp3"; sourceTree = "<group>"; };
+		FD6711E4297B072600B330C4 /* ball1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = ball1.mov; sourceTree = "<group>"; };
+		FD6711E6297B07A300B330C4 /* ball2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = ball2.mov; sourceTree = "<group>"; };
+		FD6711E8297B082E00B330C4 /* ball3.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = ball3.mov; sourceTree = "<group>"; };
+		FD6711EA297B11A800B330C4 /* be_metal_plate_surface_15801.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = be_metal_plate_surface_15801.mp3; sourceTree = "<group>"; };
 		FD803F4A2966275C001BC9B6 /* ColorLines3D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorLines3D.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD803F4D2966275C001BC9B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD803F4F2966275E001BC9B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -90,6 +106,8 @@
 		FD803F8629689BB6001BC9B6 /* Vec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vec.swift; sourceTree = "<group>"; };
 		FD803F8829689DCA001BC9B6 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
 		FDD37EEE296F1BC4003470DC /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
+		FDEED627298BD7E300E359AD /* GameplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameplayKit.framework; path = System/Library/Frameworks/GameplayKit.framework; sourceTree = SDKROOT; };
+		FDEED629298BDA6D00E359AD /* AVFAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFAudio.framework; path = System/Library/Frameworks/AVFAudio.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +115,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDEED628298BD7E300E359AD /* GameplayKit.framework in Frameworks */,
+				FDEED62A298BDA6D00E359AD /* AVFAudio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,8 +146,21 @@
 				BF2F5F0E296D91FD004BE391 /* TopListData.swift */,
 				BF2F5F10296E7AF6004BE391 /* NextBallColors.swift */,
 				BF378E90296EB6DC00B6B46C /* ExtActions.swift */,
+				FD4037B72991873E0015004D /* Particle.swift */,
 			);
 			path = Games;
+			sourceTree = "<group>";
+		};
+		FD6711E1297AF5DC00B330C4 /* AudioRes */ = {
+			isa = PBXGroup;
+			children = (
+				FD6711EA297B11A800B330C4 /* be_metal_plate_surface_15801.mp3 */,
+				FD6711E8297B082E00B330C4 /* ball3.mov */,
+				FD6711E6297B07A300B330C4 /* ball2.mov */,
+				FD6711E4297B072600B330C4 /* ball1.mov */,
+				FD6711E2297B03CA00B330C4 /* metal-ball-rolling-sound-effect.mp3 */,
+			);
+			path = AudioRes;
 			sourceTree = "<group>";
 		};
 		FD803F412966275C001BC9B6 = {
@@ -135,6 +168,7 @@
 			children = (
 				FD803F4C2966275C001BC9B6 /* MacOS-ColorLines */,
 				FD803F4B2966275C001BC9B6 /* Products */,
+				FDEED626298BD7E200E359AD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,6 +183,7 @@
 		FD803F4C2966275C001BC9B6 /* MacOS-ColorLines */ = {
 			isa = PBXGroup;
 			children = (
+				FD6711E1297AF5DC00B330C4 /* AudioRes */,
 				FD803F6129662847001BC9B6 /* Scenes */,
 				FD803F602966282C001BC9B6 /* Texture */,
 				FD803F5D296627DA001BC9B6 /* ScenesViews */,
@@ -188,6 +223,7 @@
 		FD803F602966282C001BC9B6 /* Texture */ = {
 			isa = PBXGroup;
 			children = (
+				FD4037B52991849C0015004D /* env_star.png */,
 				BF2F5F04296D3EE5004BE391 /* Panorama */,
 				FD803F7429675210001BC9B6 /* Pole2 */,
 				FD803F6529662B95001BC9B6 /* Pole */,
@@ -244,6 +280,15 @@
 				FD0D122E296AC22400A007A1 /* AlgAData.swift */,
 			);
 			path = AlgoritmA;
+			sourceTree = "<group>";
+		};
+		FDEED626298BD7E200E359AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FDEED629298BDA6D00E359AD /* AVFAudio.framework */,
+				FDEED627298BD7E300E359AD /* GameplayKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,18 +350,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD803F502966275E001BC9B6 /* Assets.xcassets in Resources */,
+				FD4037B62991849C0015004D /* env_star.png in Resources */,
 				FD803F6D29662BA0001BC9B6 /* TexturesCom_Metal_SteelRough2_1K_roughness.tif in Resources */,
 				BF2F5F0A296D3FED004BE391 /* TexturesCom_NorwayForestA_PineForest_A_1K_hdri_sphere.exr in Resources */,
+				FD6711E7297B07A300B330C4 /* ball2.mov in Resources */,
 				FD803F762967521A001BC9B6 /* FrenchMosaic_512_albedo.tiff in Resources */,
 				FD803F6E29662BA0001BC9B6 /* TexturesCom_Metal_SteelRough2_1K_albedo.tif in Resources */,
+				FD6711E5297B072600B330C4 /* ball1.mov in Resources */,
 				FD803F6F29662BA0001BC9B6 /* TexturesCom_Metal_SteelRough2_1K_metallic.tif in Resources */,
 				FD803F632966285D001BC9B6 /* SKScene.scnassets in Resources */,
+				FD6711E9297B082E00B330C4 /* ball3.mov in Resources */,
 				FD803F6B29662BA0001BC9B6 /* TexturesCom_Metal_SteelRough2_1K_ao.tif in Resources */,
 				BF2F5F06296D3EEE004BE391 /* TexturesCom_CafePripyiat_1K_hdri_sphere.exr in Resources */,
+				FD6711EB297B11A800B330C4 /* be_metal_plate_surface_15801.mp3 in Resources */,
 				FD803F782967521F001BC9B6 /* FrenchMosaic_512_normal.tiff in Resources */,
 				FD803F6C29662BA0001BC9B6 /* TexturesCom_Metal_SteelRough2_1K_normal.tif in Resources */,
 				FD436DC1296CA83200B17F88 /* crown.scn in Resources */,
 				FD803F532966275E001BC9B6 /* MainMenu.xib in Resources */,
+				FD6711E3297B03CA00B330C4 /* metal-ball-rolling-sound-effect.mp3 in Resources */,
 				FD803F7329662D89001BC9B6 /* pole1.tiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +392,7 @@
 				FD0D122F296AC22400A007A1 /* AlgAData.swift in Sources */,
 				FD436DB9296C678100B17F88 /* NextStep.swift in Sources */,
 				FD803F7A2968200D001BC9B6 /* OverlayScene.swift in Sources */,
+				FD4037B82991873E0015004D /* Particle.swift in Sources */,
 				BF2F5F13296E9EA5004BE391 /* AboutView.swift in Sources */,
 				FD803F8529689B22001BC9B6 /* Ort.swift in Sources */,
 				FD436DB7296C667D00B17F88 /* AddShadow.swift in Sources */,

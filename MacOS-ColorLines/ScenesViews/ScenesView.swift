@@ -7,9 +7,11 @@
 
 import Foundation
 import SceneKit
+import AVFAudio
 
 class SceneView: SCNView{
     var jampTick: CGFloat = 0
+    var jampDPi: CGFloat = 0
     var lightTick: CGFloat = 0
     
     var selectBall: BallNode?
@@ -25,6 +27,14 @@ class SceneView: SCNView{
     var score: Int = 0
     
     let poleLevelSize: Int = 9
+    let audioSource = SCNAudioSource(fileNamed: "be_metal_plate_surface_15801.mp3")
+    
+    enum ParticleKind: Int {
+        case stars = 0
+        case totalCount
+    }
+    
+    var particleSystems = [[SCNParticleSystem]](repeatElement([SCNParticleSystem()], count: ParticleKind.totalCount.rawValue))
     
     override init(frame: NSRect, options: [String : Any]? = nil) {
         super.init(frame: frame, options: options)
@@ -63,10 +73,19 @@ class SceneView: SCNView{
         self.loops = true
         self.isPlaying = true
         
+//        let engine = AVAudioEngine()
+//        let output = engine.outputNode
+//        if let outputUnit = output.audioUnit{
+//            print(outputUnit)
+//        }
+        
+        
         scene = SCNScene(named: "SKScene.scnassets/ColorLines.scn")
-
+        
         //Show info
         //self.showsStatistics = true
+        
+        setupParticleSystem()
         
         moveCamera()
         findNextBallColors()
@@ -101,8 +120,19 @@ extension SceneView: SCNSceneRendererDelegate{
             if let index = balls.firstIndex(where: {$0.x == selectBall.x && $0.y == selectBall.y}){
                 balls[index].position = SCNVector3Make(CGFloat(balls[index].x), abs( 0.4 * sin(jampTick)), CGFloat(balls[index].y))
                 
+                if jampDPi + CGFloat.pi < jampTick{
+                    jampDPi = jampTick
+                    if let audioSource = audioSource{
+                        audioSource.volume = 0.1
+                        audioSource.isPositional = false
+                        audioSource.load()
+                        let animationSound = SCNAction.playAudio(audioSource, waitForCompletion: false)
+                        balls[index].runAction(animationSound)
+                    }
+                }
+                
                 balls[index].tick += 1 * 0.01
-                balls[index].eulerAngles = SCNVector3Make(0, 0, balls[index].tick);
+                //balls[index].eulerAngles = SCNVector3Make(0, 0, balls[index].tick);
             }
         }
     }
@@ -190,6 +220,7 @@ extension SceneView{
                                     if let self = self{
                                         if let path = minPath{
                                             self.jampTick = 0
+                                            self.jampDPi = 0
                                             self.selectBall = nil
                                             self.balls[index].x = floorNode.x
                                             self.balls[index].y = floorNode.y
@@ -217,15 +248,48 @@ extension SceneView{
             if let point = path.first{
                 var newPath = path
                 newPath.remove(at: 0)
+                let r: CGFloat = 0.5
+                let dx = CGFloat(point.y) - balls[index].position.x
+                let dz = CGFloat(point.x) - balls[index].position.z
+                let dy = 0 - balls[index].position.y
                 
-                let animation = SCNAction.move(to: SCNVector3(x: CGFloat(point.y), y: 0, z: CGFloat(point.x)), duration: 0.1)
-                balls[index].runAction(animation, completionHandler: { [weak self] in
+                let duration: TimeInterval
+                if dx == 0 && dz == 0{
+                    duration = 0
+                }else{
+                    duration = 0.2
+                }
+                
+                let angle: CGFloat
+                let rX: CGFloat
+                let rZ: CGFloat
+                if dx < 0.1 && dx > -0.1{
+                    angle = abs(dz / (r * 2))
+                    rX = dz < 0 ? -1 : 1
+                    rZ = 0
+                }else{
+                    angle = abs(dx / (r * 2))
+                    rX = 0
+                    rZ = dx < 0 ? 1 : -1
+                }
+                
+                let animationMove = SCNAction.moveBy(x: dx, y: dy, z: dz, duration: duration)
+                let animationRotate = SCNAction.rotate(by: angle, around: SCNVector3(rX, 0, rZ), duration: duration)
+                var group = [animationRotate, animationMove]
+                if let audioSource = SCNAudioSource(fileNamed: "ball3.mov"){
+                    let animationSound = SCNAction.playAudio(audioSource, waitForCompletion: false)
+                    group.append(animationSound)
+                }
+                let animationGroup = SCNAction.group(group)
+                balls[index].runAction(animationGroup, completionHandler: { [weak self] in
                     self?.animationIndexBall(index: index, path: newPath, onConplite: onConplite)
                 })
             }else{
+                //balls[index].removeAllActions()
                 onConplite()
             }
         }else{
+            //balls[index].removeAllActions()
             onConplite()
         }
     }
